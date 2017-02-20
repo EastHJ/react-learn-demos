@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--引入react相关资源-->
+    <script src="../reactFile/react.js"></script>
+    <script src="../reactFile/react-dom.js"></script>
+    <script src="../reactFile/browser.min.js"></script>
+    <title>demo01-001-hellworld</title>
+</head>
+<body>
+<h3>example</h3>
+<div id="example"></div>
+<h3>example2</h3>
+<div id="example1"></div>
+<script type="text/babel">
+    // ** Our code goes here! **
+    ReactDOM.render(<h1>Hello,world!</h1>,document.getElementById('example'));
+    ReactDOM.render(<p>ReactDOM.render是React的最基本方法，用于将模板转为 HTML 语言，并插入指定的 DOM 节点</p>,
+                   document.getElementById('example1'));
+
+    ReactDOM.render(<div>
+                         <p><span>ReactDOM.render</span>(HTMLstring,Note)</p>
+                         <p>两个参数，html string 是一个html标签元素，</p>
+                         <p>在使用时只允许一个跟节点，若要插入多个标签，</p>
+                         <p>须将所有标签包含子一个顶级父标签中</p></div>,
+                    document.getElementById('example2'));
+</script>
+<h3>example2</h3>
+<div id="example2"></div>
+</body>
+</html>
