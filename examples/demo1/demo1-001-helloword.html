@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <!--引入react相关资源-->
-    <script src="../reactFile/react.js"></script>
-    <script src="../reactFile/react-dom.js"></script>
-    <script src="../reactFile/browser.min.js"></script>
+    <script src="/react-learn-demos/build/react.js"></script>
+    <script src="/react-learn-demos/build/react-dom.js"></script>
+    <script src="/react-learn-demos/build/browser.min.js"></script>
     <title>demo01-001-hellworld</title>
 </head>
 <body>
@@ -25,8 +25,18 @@
                          <p>在使用时只允许一个跟节点，若要插入多个标签，</p>
                          <p>须将所有标签包含子一个顶级父标签中</p></div>,
                     document.getElementById('example2'));
+    function tick() {
+        const element = (<div>
+            <h2>This is a tick</h2>
+            <h3>当当当当当前时间为{new Date().toLocaleTimeString()}. </h3>
+        </div>);
+        ReactDOM.render(element, document.getElementById('tick'));
+    }
+        setInterval(tick,1000);
+
 </script>
 <h3>example2</h3>
 <div id="example2"></div>
+<div id="tick"></div>
 </body>
 </html>

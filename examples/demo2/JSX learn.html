@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="/react-learn-demos/build/react.js"></script>
+    <script src="/react-learn-demos/build/react-dom.js"></script>
+    <script src="/react-learn-demos/build/browser.min.js"></script>
+    <title>JSX语法学习</title>
+    <script type="text/babel">
+       var names = ['Alice','Lily','Jack'];
+       var element = (
+               <div>
+                   {
+                       names.map(
+                           function (name) {
+                               return <div>Hello,{name}</div>
+                           }
+                       )
+                   }
+               </div>
+       );
+
+       ReactDOM.render(element,document.getElementById('root'));
+    </script>
+</head>
+<body>
+    <div>
+        React 的 JSX 语语法允许HTML元素与JavaScript代码混写而不用将HTML元素转换成字符串<br>
+        JSX语法的转移字符基本规则是：<br>
+         &nbsp;&nbsp;&nbsp;&nbsp;遇到 HTML 标签（以 < 开头），就用 HTML 规则解析；<br>&nbsp;&nbsp;&nbsp;&nbsp;遇到代码块（以 { 开头），就用 JavaScript 规则解析。
+    </div>
+    <h4>代码</h4>
+    <div>
+        var names = ['Alice','Lily','Jack'];<br>
+        var element = (<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;names.map(<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function (name) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return &lt;div&gt;Hello,{name}&lt;/div&gt;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   )<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   }<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+        );<br>
+
+        ReactDOM.render(element,document.getElementById('root'));
+    </div>
+    <h4>代码效果</h4>
+    <div id="root"></div>
+</body>
+</html>
