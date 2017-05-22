@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="/react-learn-demos/build/react.js"></script>
+    <script src="/react-learn-demos/build/react-dom.js"></script>
+    <script src="/react-learn-demos/build/browser.min.js"></script>
+    <title>JSX learn</title>
+</head>
+<body>
+<div id="testfrist">
+</div>
+<script type = "text/babel">
+    var arr = [
+        <h1>Hello,World!</h1>,
+        <h2>knowledge stems from practice</h2>,
+        <p>JSX 可以在模板中插入JavaScript变量时会，将数组全部展开</p>
+    ];
+
+    ReactDOM.render(<div>{arr}</div>,document.getElementById('testfrist'));
+</script>
+
+</body>
+</html>
